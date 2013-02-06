@@ -1,0 +1,659 @@
+/*
+
+    STYLE.CSS
+    By Chris Ferdinandi.
+    http://gomakethings.com
+    
+
+*/
+
+
+/*  CSS RESET */
+
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+   @-moz-viewport { width: device-width; zoom: 1.0; }
+    @-ms-viewport { width: device-width; zoom: 1.0; }
+     @-o-viewport { width: device-width; zoom: 1.0; }
+        @viewport { width: device-width; zoom: 1.0; }
+
+
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, abbr, acronym, address, big, cite, code, 
+del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, 
+dl, dt, dd, ol, ul, li, 
+button, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, 
+time, mark, audio, video { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline; 
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { 
+    display: block; 
+}
+
+html { 
+    overflow-y: scroll; 
+    -webkit-text-size-adjust: 100%; 
+        -ms-text-size-adjust: 100%; 
+} 
+
+audio, canvas, video { 
+    display: inline-block; 
+    *display: inline; 
+    *zoom: 1; 
+}
+
+audio:not([controls]) { 
+    display: none; 
+}
+
+img, video { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+iframe, object, embed {
+    max-width: 100%; 
+}
+
+img { 
+    -ms-interpolation-mode: bicubic; 
+}
+
+a:focus { 
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color; 
+    outline-offset: -2px; 
+}
+
+a:hover, a:active { 
+    outline: 0; 
+}
+
+
+
+
+
+/*  THE GRID */
+
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+.container { 
+    max-width: 680px;
+    width: 88%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+@media (min-width: 481px) {
+
+	.row {
+        margin-left: -1.515151515152%;
+        margin-right: -1.515151515152%;
+	}
+
+    [class^="grid-"], 
+    [class*=" grid-"] {
+        float: left;
+        width:96.969696969697%;
+        margin-left: 1.515151515152%;
+        margin-right: 1.515151515152%;
+    }
+
+    .grid-third {
+        width: 30.30303030303%;
+    }
+
+    .grid-half,
+    .grid-img {
+        width: 46.969696969697%;
+    }
+
+    .grid-flip {
+        float: right;
+    }
+
+}
+
+
+/*  6-column grid  */
+@media (min-width: 681px) {
+
+    .grid-1 {
+        width: 13.636363636364%;
+    }
+
+    .grid-2,
+    .grid-third,
+    .grid-img {
+        width: 30.30303030303%;
+    }
+
+    .grid-3,
+    .grid-half { 
+        width: 46.969696969697%;
+    }
+
+    .grid-4 { 
+        width: 63.636363636364%;
+    }
+
+    .grid-5 { 
+        width: 80.30303030303%;
+    }
+
+    .grid-6,
+    .grid-full { 
+        width: 96.969696969697%;
+    }
+
+
+    /*  Offets let you shift grid elements to the right 
+     *  but stay aligned to the grid. */
+    .offset-1 {
+        margin-left: 18.181818181818%;
+    }
+
+    .offset-2 {
+        margin-left: 34.848484848485%;
+    }
+
+    .offset-3 {
+        margin-left: 51.515151515152%;
+    }
+
+    .offset-4 {
+        margin-left: 68.181818181818%;
+    }
+
+    .offset-5 {
+        margin-left: 84.848484848485%;
+    }
+
+}
+
+
+/*  Additional gridding for grid-img on bigger screens.
+ *  Adjust as needed. */
+@media (min-width: 961px) {
+    .grid-img {
+        width: 13.636363636364%;
+    }
+}
+
+
+
+
+
+/*  TYPOGRAPHY */
+
+body { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px; 
+    line-height: 1.470588235; 
+    color: #272727;
+    background: #ffffff;
+    border-top: 8px solid #e5e5e5;
+}
+
+@media (min-width: 681px) {
+    body {
+        line-height: 1.588235294;
+    }
+}
+
+.text-big {
+    font-size: 26px;
+}
+
+.text-small {
+    font-size: 17px;
+}
+
+.text-muted {
+    color: #808080;
+}
+
+@media (min-width: 681px) {
+    .text-big {
+        font-size: 34px;
+        font-weight: 200;
+    }
+}
+
+
+p { 
+    margin-bottom: 26px; 
+}
+
+
+/*  Links */
+
+a { 
+    color: #3892d0;
+    text-decoration: none; 
+}
+
+a:hover { 
+    color: #266ea0;
+    text-decoration: underline; 
+}
+
+a img { 
+    border: none; 
+    background: none; 
+} 
+
+a:hover img { 
+    border: none; 
+    background: none; 
+    opacity:0.8;
+    filter:alpha(opacity=80); 
+}
+
+
+/*  Lists */
+
+ul, ol { 
+    margin-bottom: 26px; 
+    margin-left: 26px;
+}
+
+@media (min-width: 681px) {
+	ul, ol { 
+	    margin-left: 51px; 
+	}
+}
+
+ul ul, ul ol, ol ol, ol ul { 
+    margin-bottom: 0; 
+}
+
+ul { 
+    list-style: disc; 
+}
+
+ol { 
+    list-style: decimal; 
+}
+
+
+/*  Headers */
+
+h1, h2, h3 { 
+    line-height: 1.2; 
+    font-weight: bold; 
+    margin-bottom: 14px;
+    padding-top: 14px;
+    text-align: center;
+}
+
+h1 { 
+    font-size: 34px;
+    padding-top: 34px;
+}	
+
+h2 { 
+    font-size: 26px;
+}
+
+h3 { 
+    font-size: 20px;
+}
+
+
+@media (min-width: 681px) {
+	h1 { 
+	    font-size: 51px; 
+	}
+
+	h2 {
+	    font-size: 34px;
+	}
+
+	h3 {
+	    font-size: 26px;;
+	}
+}
+
+
+/*  Lines, Quotes and Emphasis */
+
+hr { 
+    margin: 34px auto; 
+    border: 0; 
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #ffffff; 
+}
+
+strong { 
+    font-weight: bold; 
+}
+
+em { 
+    font-style: italic; 
+}
+
+
+
+
+/*  CODE */
+
+code, pre { 
+    padding: 0 3px 2px; 
+    font-family: Menlo, Monaco, "Courier New", monospace; 
+    font-size: .764705882em; 
+    color: #272727; 
+    border-radius: 3px; 
+}
+
+code { 
+    padding: 3px 4px; 
+    color: #d14; 
+    background-color: #f7f7f9; 
+    border: 1px solid #e1e1e8; 
+}
+
+pre { 
+    display: block; 
+    padding: 8.5px;
+    margin-bottom: 26px; 
+    font-size: 13px; 
+    line-height: 1.538461538; 
+    background-color: #f5f5f5; 
+    border: 1px solid #ccc; 
+    border: 1px solid rgba(0, 0, 0, 0.15); 
+    border-radius: 4px; 
+    white-space: pre; 
+    white-space: pre-wrap; 
+    word-break: break-all; 
+}
+
+pre code { 
+    padding: 0; 
+    color: inherit; 
+    background-color: transparent; 
+    border: 0; 
+}
+
+
+
+
+
+/*  BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 14px 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.33333333;
+    font-weight: normal;
+    color: #272727;
+    background: #e5e5e5;
+    background-image: -webkit-linear-gradient(top, #e5e5e5, #b8b8b8);
+    background-image: -moz-linear-gradient(top, #e5e5e5, #b8b8b8);
+    background-image: -ms-linear-gradient(top, #e5e5e5, #b8b8b8);
+    background-image: -o-linear-gradient(top, #e5e5e5, #b8b8b8);
+    background-image: linear-gradient(top, #e5e5e5, #b8b8b8);
+    background-repeat: repeat-x;
+    border: 1px solid #b8b8b8;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    *margin-left: .3em;
+    margin-bottom: .3em; 
+}
+
+.btn:hover, a .btn:hover,
+.btn.active, a .btn.active {
+    color: #272727;
+    background: #b8b8b8;
+    text-decoration: none; 
+}
+
+.btn-blue, .btn-blue:hover, a .btn-blue:hover {
+    color: #ffffff; 
+}
+
+.btn-blue {
+    background: #3892d0;
+    background-image: -webkit-linear-gradient(top, #3892d0, #266ea0);
+    background-image: -moz-linear-gradient(top, #3892d0, #266ea0);
+    background-image: -ms-linear-gradient(top, #3892d0, #266ea0);
+    background-image: -o-linear-gradient(top, #3892d0, #266ea0);
+    background-image: linear-gradient(top, #3892d0, #266ea0);
+    background-repeat: repeat-x;
+    border: 1px solid #3892d0; 
+}
+
+.btn-blue:hover, a .btn-blue:hover {
+    background: #266ea0;
+    border: 1px solid #266ea0; 
+}
+
+.btn:active, .btn.active {
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0; 
+}
+
+.btn-small {
+    font-size: 17px;
+    padding: 8px 14px;
+}
+
+button, .btn {
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-appearance: none; 
+}
+
+.btn:first-child {
+    *margin-left: 0; 
+}
+
+.btn:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; 
+}
+
+
+
+
+
+/*  ICONS */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url("fonts/icomoon.eot");
+    src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), 
+         url("fonts/icomoon.woff") format("woff"), 
+         url("fonts/icomoon.ttf") format("truetype"), 
+         url("fonts/icomoon.svg#IcoMoon") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; 
+}
+
+.icon-logo:before { content: "\e000"; }
+.icon-github:before { content: "\e001"; }
+
+
+
+
+
+/*  BACKGROUND COLORS */
+
+.bg-gray {
+    background-color: #f4f4f4;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.hero {
+    font-size: 17px;
+    background-color: #e5e5e5;
+    padding: 8px;
+    margin-bottom: 26px;
+    border-radius: 4px;
+}
+
+.hero-dark {
+    background-color: #b8b8b8;
+    margin-bottom: 0;
+}
+
+
+
+
+
+/*  TABLES */
+/*  Table styling */
+
+/*  Removes default browser settings
+ *  and evens out inconsistencies. */
+table { 
+    max-width: 100%; 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+}
+
+/*  Sets table width to 100%.
+ *  Adds bottom-margin. */
+.table { 
+    width: 100%; 
+    margin-bottom: 1.529411765em;
+}
+
+/*  Adds table cell padding,
+ *  aligns text to the left,
+ *  and adds a top border to each cell. */
+.table th, .table td { 
+    padding: .470588235em; 
+    text-align: left; 
+    border-top: .071428571em solid #b8b8b8; 
+}
+
+/*  Sets table header font-weight to bold.
+ *  Aligns table header text to the bottom of each cell. */
+.table th { 
+    font-weight: bold; 
+    vertical-align: bottom; 
+}
+
+/*  Aligns cell text to the top of each cell. */
+.table td { 
+    vertical-align: top; 
+}
+
+/*  Removes the border-top from the first row. */
+.table thead:first-child tr th, 
+.table thead:first-child tr td { 
+    border-top: 0; 
+}
+
+/*  Adds border-top between two table-body sections. */
+.table tbody + tbody { 
+    border-top: .142857143em solid #b8b8b8; 
+}
+
+/*  Reduces cell padding */
+.table-condensed th, 
+.table-condensed td { 
+    padding: .470588235em .294117647em; 
+}
+
+/* Adds borders and border-radius. */
+.table-bordered { 
+    border: .071428571em solid #b8b8b8; 
+    border-collapse: separate; 
+    *border-collapse: collapsed; 
+    border-radius: .470588235em; 
+}
+
+.table-bordered th + th, 
+.table-bordered td + td, 
+.table-bordered th + td, 
+.table-bordered td + th { 
+    border-left: .071428571em solid #b8b8b8; 
+}
+
+.table-bordered thead:first-child tr:first-child th, 
+.table-bordered tbody:first-child tr:first-child th, 
+.table-bordered tbody:first-child tr:first-child td { 
+    border-top: 0; 
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child, 
+.table-bordered tbody:first-child tr:first-child td:first-child { 
+    border-radius: .470588235em 0 0 0; 
+}
+
+.table-bordered thead:first-child tr:first-child th:last-child, 
+.table-bordered tbody:first-child tr:first-child td:last-child { 
+    border-radius: 0 .470588235em 0 0; 
+}
+
+.table-bordered thead:last-child tr:last-child th:first-child, 
+.table-bordered tbody:last-child tr:last-child td:first-child { 
+    border-radius: 0 0 0 .470588235em; 
+}
+
+.table-bordered thead:last-child tr:last-child th:last-child, 
+.table-bordered tbody:last-child tr:last-child td:last-child { 
+    border-radius: 0 0 .470588235em 0; 
+}
+
+
+
+
+
+/*  ALIGNMENT */
+
+.text-center {
+    text-align: center;
+}
+
+
+
+
+
+/*  CLEARFIX */
+
+.container:before, .container:after, 
+.row:before, .row:after { 
+    display: table; 
+    content: ""; 
+    zoom: 1; 
+}
+
+.container:after, 
+.row:after { 
+    clear: both; 
+}

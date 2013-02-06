@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Tables - Simple Table Styling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- HTML5 Shim for IE -->
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<section style="margin-bottom: 51px;">
+	    <article class="container">
+	        <h1><i class="icon-logo"></i> Tables</h1>
+	        <p class="text-big text-center">Simple table styling.</p>
+
+	        <p class="text-center"><a class="btn btn-blue" href="https://github.com/cferdinandi/tables"><i class="icon-github"></i> Download on GitHub</a></p>
+
+	        <p class="text-small text-muted text-center">Or keep reading to learn more...</p>
+
+	        <hr>
+
+	        <h2>Basic Table</h2>
+
+	        <p>For simple table styling, use the <code>.table</code> class.</p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Super Hero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Parker</td>
+                        <td>Spiderman</td>
+                    </tr>
+                    <tr>
+                        <td>Bruce</td>
+                        <td>Wayne</td>
+                        <td>Batman</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>Superman</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <pre>&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Super Hero&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Peter&lt;/td&gt;
+            &lt;td&gt;Parker&lt;/td&gt;
+            &lt;td&gt;Spiderman&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Bruce&lt;/td&gt;
+            &lt;td&gt;Wayne&lt;/td&gt;
+            &lt;td&gt;Batman&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Clark&lt;/td&gt;
+            &lt;td&gt;Kent&lt;/td&gt;
+            &lt;td&gt;Superman&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+
+            <hr>
+
+
+            <h2>Condensed Table</h2>
+
+            <p>Reduce cell padding by adding the <code>.table-condensed</code> class.</p>
+
+            <p class="text-small">You still need to include the <code>.table</code> class.</p>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Super Hero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Parker</td>
+                        <td>Spiderman</td>
+                    </tr>
+                    <tr>
+                        <td>Bruce</td>
+                        <td>Wayne</td>
+                        <td>Batman</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>Superman</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <pre>&lt;table class="table table-condensed"&gt;
+    ...
+&lt;/table&gt;</pre>
+
+            <hr>
+
+
+            <h2>Bordered Table</h2>
+
+            <p>Add borders and rounded corners by adding the <code>.table-bordered</code> class.</p>
+
+            <p class="text-small">You still need to include the <code>.table</code> class.</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Super Hero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Parker</td>
+                        <td>Spiderman</td>
+                    </tr>
+                    <tr>
+                        <td>Bruce</td>
+                        <td>Wayne</td>
+                        <td>Batman</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>Superman</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <pre>&lt;table class="table table-bordered"&gt;
+    ...
+&lt;/table&gt;</pre>
+
+            <hr>
+
+
+            <h2>Combining Styles</h2>
+
+            <p>You can combine the <code>.table-condensed</code> and <code>.table-bordered</code> classes for additional styling.</p>
+
+        </article>
+	</section>
+
+	<footer class="bg-gray">
+        <article class="container">
+
+            <p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Adapted from <a href="http://getbootstrap.com">Bootstrap</a>. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+
+        </article>
+	</footer>
+
+</body>
+</html>

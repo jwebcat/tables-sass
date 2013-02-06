@@ -29,7 +29,7 @@ img, audio, video, canvas { max-width: 100%; }
 
 /*  Sets Body Width */
 .container { 
-    max-width: 640px;
+    max-width: 40em;
     width: 88%;
     margin-left: auto; 
     margin-right: auto;

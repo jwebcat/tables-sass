@@ -5,27 +5,46 @@
     <title>Tables - Simple Table Styling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="kraken.css" type="text/css" />
 
-    <!-- HTML5 Shim for IE -->
-    <!--[if IE]>
+    <!-- HTML5 Shim for IE 6-8 -->
+    <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+    <!-- MS Homescreen Icons -->
+    <meta name="msapplication-TileColor" content="#0088cc">
+    <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
 </head>
 
 <body>
-	<section style="margin-bottom: 51px;">
+	<section class="space-bottom bg-gray">
+	    <article class="container text-center">
+
+            <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Tables</h1>
+            <p class="text-tall text-muted">Simple table styling.</p>
+
+	        <p><a class="btn btn-blue btn-large" href="https://github.com/cferdinandi/tables"><i class="icon-github"></i> Download on GitHub</a></p>
+
+	        <p class="text-muted">Or keep reading to learn more...</p>
+
+        </article>
+    </section>
+
+	<section class="space-bottom">
 	    <article class="container">
-	        <h1><i class="icon-logo"></i> Tables</h1>
-	        <p class="text-big text-center">Simple table styling.</p>
 
-	        <p class="text-center"><a class="btn btn-blue" href="https://github.com/cferdinandi/tables"><i class="icon-github"></i> Download on GitHub</a></p>
 
-	        <p class="text-small text-muted text-center">Or keep reading to learn more...</p>
-
-	        <hr>
-
-	        <h2>Basic Table</h2>
+	        <h1 class="text-center">Basic tables</h1>
 
 	        <p>For simple table styling, use the <code>.table</code> class.</p>
 
@@ -86,11 +105,11 @@
             <hr>
 
 
-            <h2>Condensed Table</h2>
+            <h1 class="text-center">Condensed Table</h1>
 
             <p>Reduce cell padding by adding the <code>.table-condensed</code> class.</p>
 
-            <p class="text-small">You still need to include the <code>.table</code> class.</p>
+            <p>You still need to include the <code>.table</code> class.</p>
 
             <table class="table table-condensed">
                 <thead>
@@ -126,11 +145,11 @@
             <hr>
 
 
-            <h2>Bordered Table</h2>
+            <h1 class="text-center">Bordered Table</h1>
 
             <p>Add borders and rounded corners by adding the <code>.table-bordered</code> class.</p>
 
-            <p class="text-small">You still need to include the <code>.table</code> class.</p>
+            <p>You still need to include the <code>.table</code> class.</p>
 
             <table class="table table-bordered">
                 <thead>
@@ -166,7 +185,7 @@
             <hr>
 
 
-            <h2>Combining Styles</h2>
+            <h1 class="text-center">Combining Styles</h1>
 
             <p>You can combine the <code>.table-condensed</code> and <code>.table-bordered</code> classes for additional styling.</p>
 
@@ -176,10 +195,15 @@
 	<footer class="bg-gray">
         <article class="container">
 
-            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Adapted from <a href="http://getbootstrap.com">Bootstrap</a>. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Licensed under <a href="http://www.wtfpl.net/">WTFPL</a>.</p>
 
         </article>
 	</footer>
+
+
+    <!-- Javascript -->
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type='text/javascript' src='js/kraken.js'></script>
 
 </body>
 </html>

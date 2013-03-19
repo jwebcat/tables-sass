@@ -533,6 +533,13 @@ a .btn-blue:hover {
     border-radius: .294117647em;
 }
 
+.btn-jumbo {
+    padding: .882352941em 1.176470588em;
+    font-size: 1.176470588em;
+    line-height: normal;
+    border-radius: .294117647em;
+}
+
 .btn-block,
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -668,6 +675,7 @@ select:focus {
 
 .icon-logo:before { content: "\e000"; }
 .icon-github:before { content: "\e001"; }
+.icon-docs:before { content: "\e002"; }
 
 
 

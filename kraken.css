@@ -704,6 +704,7 @@ table {
  *  and adds a top border to each cell. */
 .table th, .table td { 
     padding: .470588235em; 
+    text-align: left; 
     border-top: .071428571em solid #b8b8b8; 
 }
 

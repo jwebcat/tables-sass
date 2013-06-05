@@ -1,6 +1,6 @@
-/*
+/* =============================================================
 
-    TABLES.CSS v1.0
+    Tables v1.0
     Simple table styling by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -11,11 +11,13 @@
     Licensed under the Apache License v2.0
     http://www.apache.org/licenses/LICENSE-2.0
     
+ * ============================================================= */
 
-*/
 
-/*  RESPONSIVE RESET */
-/*  Replace with your own */
+/* =============================================================
+    RESPONSIVE RESET
+    Replace with your own.
+ * ============================================================= */
 
 @-webkit-viewport { width: device-width; zoom: 1.0; }
    @-moz-viewport { width: device-width; zoom: 1.0; }
@@ -39,8 +41,10 @@ img, audio, video, canvas { max-width: 100%; }
 
 
 
-/*  TABLES */
-/*  Table styling */
+/* =============================================================
+    TABLES
+    Table styling.
+ * ============================================================= */
 
 /*  Removes default browser settings
  *  and evens out inconsistencies. */

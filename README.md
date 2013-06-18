@@ -1,14 +1,14 @@
-# Alerts
-Simple alert messages.
+# Tables - Simple Table Styling
+Tables is a collection of simple image styling adapted from [Bootstrap](http://getbootstrap.com).
 
 ## How It Works
-Getting started with Alerts is really easy. [View the online tutorial](http://cferdinandi.github.com/alerts/) or dig through the `index.html` file.
+Getting started with Tables is really easy. [View the online tutorial](http://cferdinandi.github.com/tables/) or dig through the `index.html` file.
 
 ## Changelog
-* v1.0 (June 7, 2013)
-  * Switched to MIT license.
-* v1.0 (May 18, 2013)
+* Version 1.0 (February 13, 2013)
+  * Renamed `example.html` to `index.html`.
+* Version 1.0 (February 5, 2013)
   * Initial release.
 
 ## License
-Alerts is free to use under the [MIT License](http://gomakethings.com/mit/).
+Tables is licensed under [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0).

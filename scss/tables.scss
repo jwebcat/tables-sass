@@ -1,5 +1,37 @@
-// ------- import config for tables -------
-@import "config";
+// ----------------------------------------
+// // ------ tables config ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ colors ------
+// ----------------------------------------
+
+$table-border-color: #b8b8b8;
+
+// ----------------------------------------
+// // ------ demo container settings ------
+// ----------------------------------------
+
+$container-width: 88%;
+$container-max-width: 40em;
+
+// ----------------------------------------
+// // ------ table settings ------
+// ----------------------------------------
+
+$table-border-width: .071428571em;
+$table-border-style: solid;
+$table-margin-bottom: 1.529411765em;
+$table-cell-padding: .470588235em;
+$table-cell-text-align: left;
+$table-cell-border-top: $table-border-width $table-border-style $table-border-color;
+$table-header-font-weight: bold;
+$table-body-border-top: .142857143em $table-border-style $table-border-color;
+$table-condensed-padding: .470588235em .294117647em;
+$table-bordered-border: $table-border-width $table-border-style $table-border-color;
+$table-bordered-border-radius: .470588235em;
+$table-border-left: $table-border-width $table-border-style $table-border-color;
+$table-bordered-child-radius: .470588235em;
 
 /* =============================================================
 

@@ -1,0 +1,48 @@
+// here you can put all of your last minute or lazy hacks.
+// So that you can eliminate them all as you have time or want to
+
+h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+    @extend %text-center;
+        + p {
+            @extend %text-center;
+            font-size: 1.5em;
+        }
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: .5em;
+    @extend %text-center;
+        + p {
+            @extend %text-center;
+            font-size: 1.5em;
+        }
+}
+
+p + p {
+    @extend %text-center;
+    font-size: 1.3em
+}
+
+
+// for code examples
+pre {
+    overflow-y: auto;
+}
+
+p > button {
+    @extend %btn;
+    @extend %btn-blue;
+    @extend %btn-large;
+}
+
+/*  BACKGROUND COLORS */
+
+.bg-gray {
+    background-color: #f4f4f4;
+    padding-top: 1.529411765em;
+    padding-bottom: 1.529411765em;
+}
+

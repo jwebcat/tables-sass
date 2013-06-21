@@ -1,0 +1,256 @@
+/*  THE GRID */
+/*  Structure and layout */
+
+// extend for clearfix
+.cfix,
+%cfix {
+        &:before, &:after {
+            display: table;
+            content: "";
+            *zoom: 1;
+        }
+            &:after {
+                clear:both;
+            }
+}
+
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+.container,
+%container {
+    max-width: $containerMaxWidth;
+    width: $containerWidth;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*  Still mostly single-column.
+ *  Grid-third, grid-half, and grid-img
+ *  provide sub-gridding on smaller screens.  */
+@media (min-width: #{$portable}) {
+
+    .row,
+    %row {
+        margin-left: -1.515151515152%;
+        margin-right: -1.515151515152%;
+    }
+
+    [class^="grid-"],
+    [class*="grid-"],
+    %grid-float {
+        float: left;
+        width: 96.969696969697%;
+        margin-left: 1.515151515152%;
+        margin-right: 1.515151515152%;
+    }
+
+    .grid-third,
+    %grid-third {
+        width: 30.30303030303%;
+    }
+
+    .grid-half,
+    %grid-half,
+    .grid-img,
+    %grid-img {
+        width: 46.969696969697%;
+    }
+
+    .grid-two-thirds,
+    %grid-two-thirds {
+        width: 63.636363636364%;
+    }
+
+    /*  Reverses order of grid for content choreography */
+    .grid-flip,
+    %grid-flip {
+        float: right;
+    }
+
+}
+
+
+/*  6-column grid  */
+@media (min-width: #{$lap}) {
+
+    %grid-float {
+        float: left;
+        width: 96.969696969697%;
+        margin-left: 1.515151515152%;
+        margin-right: 1.515151515152%;
+    }
+
+    .grid-1,
+    %grid-1 {
+        width: 13.636363636364%;
+    }
+
+    .grid-2,
+    %grid-2,
+    .grid-third,
+    %grid-third,
+    .grid-img,
+    %grid-img {
+        width: 30.30303030303%;
+    }
+
+    .grid-3,
+    %grid-3,
+    .grid-half,
+    %grid-half {
+        width: 46.969696969697%;
+    }
+
+    .grid-4,
+    %grid-4,
+    .grid-two-thirds,
+    %grid-two-thirds {
+        width: 63.636363636364%;
+    }
+
+    .grid-5,
+    %grid-5 {
+        width: 80.30303030303%;
+    }
+
+    .grid-6,
+    %grid-6,
+    .grid-full,
+    %grid-full {
+        width: 96.969696969697%;
+    }
+
+
+    /*  Offets let you shift grid elements to the right
+     *  but stay aligned to the grid. */
+    .offset-1,
+    %offset-1 {
+        margin-left: 18.181818181818%;
+    }
+
+    .offset-2,
+    %offset-2 {
+        margin-left: 34.848484848485%;
+    }
+
+    .offset-3,
+    %offset-3 {
+        margin-left: 51.515151515152%;
+    }
+
+    .offset-4,
+    %offset-4 {
+        margin-left: 68.181818181818%;
+    }
+
+    .offset-5,
+    %offset-5 {
+        margin-left: 84.848484848485%;
+    }
+
+}
+
+
+/*  Additional gridding for grid-img on bigger screens.
+ *  Adjust as needed. */
+@media (min-width: #{$desk}) {
+    .grid-img,
+    %grid-img {
+        width: 13.636363636364%;
+    }
+}
+
+
+// grid mixins
+
+@mixin container() {
+    @extend %container;
+    @extend %cfix;
+}
+
+@mixin row() {
+    @extend %row;
+    @extend %cfix;
+}
+
+@mixin grid($size) {
+    @if $size == 1 {
+        @extend %grid-1;
+        @extend %grid-float;
+    }
+    @else if $size == 2 {
+        @extend %grid-2;
+        @extend %grid-float;
+    }
+    @else if $size == one-third {
+        @extend %grid-third;
+        @extend %grid-float;
+    }
+    @else if $size == img {
+        @extend %grid-img;
+        @extend %grid-float;
+    }
+    @else if $size == 3 {
+        @extend %grid-3;
+        @extend %grid-float;
+    }
+    @else if $size == one-half {
+        @extend %grid-half;
+        @extend %grid-float;
+    }
+    @else if $size == 4 {
+        @extend %grid-4;
+        @extend %grid-float;
+    }
+    @else if $size == two-thirds {
+        @extend %grid-two-thirds;
+        @extend %grid-float;
+    }
+    @else if $size == 5 {
+        @extend %grid-5;
+        @extend %grid-float;
+    }
+    @else if $size == 6 {
+        @extend %grid-6;
+        @extend %grid-float;
+    }
+    @else if $size == full {
+        @extend %grid-full;
+        @extend %grid-float;
+    }
+}
+
+@mixin offset($shift) {
+    @if $shift == 1 {
+        @extend %offset-1;
+    }
+    @if $shift == 2 {
+        @extend %offset-2;
+    }
+    @if $shift == 3 {
+        @extend %offset-3;
+    }
+    @if $shift == 4 {
+        @extend %offset-4;
+    }
+    @if $shift == 5 {
+        @extend %offset-5;
+    }
+}
+
+// usage for grid() and offset() :
+//     section{
+//         @include container();
+//             article {
+//                 @include row()
+//                     figure {
+//                         @include grid(one-half);
+//                     }
+//                     figcaption {
+//                         @include grid(1);
+//                         @include shift(2);
+//                     }
+//             }
+//     }
+

@@ -1,0 +1,31 @@
+/* =============================================================
+    SNAPSHOT
+    Image styling.
+ * ============================================================= */
+
+/*  Adds a slight border radius */
+.img-rounded,
+%img-rounded {
+    border-radius: $img-rounded-border-radius;
+}
+
+/*  Adds a border and box shadow */
+.img-border,
+%img-border,
+.img-polaroid,
+%img-polaroid {
+    border: $img-border;
+    box-shadow: $img-box-shadow;
+}
+
+/*  Adds padding and a white border */
+.img-polaroid, %img-polaroid {
+    padding: $img-polaroid-padding;
+    background-color: $img-polaroid-bg-color;
+}
+
+/*  Adds a 50% border radius,
+ *  turning square images into a circle. */
+.img-circle, %img-circle {
+    border-radius: 50%;
+}

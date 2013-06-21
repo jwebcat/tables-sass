@@ -1,0 +1,1058 @@
+/*
+
+    KRAKEN-SASS
+    converted to SCSS by @jwebcat
+    A lightweight front-end boilerplate by Chris Ferdinandi.
+    http://gomakethings.com
+
+
+    Licensed under WTFPL.
+    http://www.wtfpl.net/
+
+
+    COLORS
+    primary: #0088cc
+    secondary: #005580
+    black: #272727
+    Gray: #808080
+    Light Gray: #e5e5e5
+
+
+    FONT STACKS
+    Serif: Georgia, Times, serif
+    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Add your own here...
+
+
+    TYPOGRAPHIC SCALE
+    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+
+*/
+/*  CSS RESET */
+/*  Meyer's CSS Reset, Normalized.css, and custom code */
+/*  Mobile Screen Resizing */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+/*  Remove browser defaults */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000324}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*  Set display type for HTML5 semantic elements */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000336}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/*  Force scrollbar display to prevent jumping on pages.
+ *  Fix text resize bug on mobile devices. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000342}}
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  Display audio, canvas, and video elements as inline block elements. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000349}}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*  Prevent modern browsers from displaying audio without controls. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000356}}
+audio:not([controls]) {
+  display: none; }
+
+/*  Prevent img and video elements from spilling
+ *  outside of the page on smaller screens. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000362}}
+img, video {
+  max-width: 100%;
+  height: auto; }
+
+/*  Prevent iframe, object, and embed elements from
+ *  spilling outside of the page on smaller screens. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000369}}
+iframe, object, embed {
+  max-width: 100%; }
+
+/*  Prevents IE from making scaled images look like crap */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000374}}
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/*  Address outline inconsistency between Chrome and other browsers. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000380}}
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: .294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.142857143em; }
+
+/*  Improve readability when focused and also mouse hovered in all browsers. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_reset\.scss}line{font-family:\0000387}}
+a:hover, a:active {
+  outline: 0; }
+
+/*  THE GRID */
+/*  Structure and layout */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\000037}}
+.cfix:before, .cfix:after {
+  display: table;
+  content: "";
+  *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000312}}
+.cfix:after {
+  clear: both; }
+
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000320}}
+.container {
+  max-width: 60em;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*  Still mostly single-column.
+ *  Grid-third, grid-half, and grid-img
+ *  provide sub-gridding on smaller screens.  */
+@media (min-width: 30em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000334}}
+  .row {
+    margin-left: -1.515151515152%;
+    margin-right: -1.515151515152%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000341}}
+  [class^="grid-"],
+  [class*="grid-"] {
+    float: left;
+    width: 96.969696969697%;
+    margin-left: 1.515151515152%;
+    margin-right: 1.515151515152%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000349}}
+  .grid-third {
+    width: 30.30303030303%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000356}}
+  .grid-half,
+  .grid-img {
+    width: 46.969696969697%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000361}}
+  .grid-two-thirds {
+    width: 63.636363636364%; }
+
+  /*  Reverses order of grid for content choreography */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000367}}
+  .grid-flip {
+    float: right; } }
+/*  6-column grid  */
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000385}}
+  .grid-1 {
+    width: 13.636363636364%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\0000394}}
+  .grid-2,
+  .grid-third,
+  .grid-img {
+    width: 30.30303030303%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003101}}
+  .grid-3,
+  .grid-half {
+    width: 46.969696969697%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003108}}
+  .grid-4,
+  .grid-two-thirds {
+    width: 63.636363636364%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003113}}
+  .grid-5 {
+    width: 80.30303030303%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003120}}
+  .grid-6,
+  .grid-full {
+    width: 96.969696969697%; }
+
+  /*  Offets let you shift grid elements to the right
+   *  but stay aligned to the grid. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003128}}
+  .offset-1 {
+    margin-left: 18.181818181818%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003133}}
+  .offset-2 {
+    margin-left: 34.848484848485%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003138}}
+  .offset-3 {
+    margin-left: 51.515151515152%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003143}}
+  .offset-4 {
+    margin-left: 68.181818181818%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003148}}
+  .offset-5 {
+    margin-left: 84.848484848485%; } }
+/*  Additional gridding for grid-img on bigger screens.
+ *  Adjust as needed. */
+@media (min-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_grid\.scss}line{font-family:\00003159}}
+  .grid-img {
+    width: 13.636363636364%; } }
+/*  TYPOGRAPHY */
+/*  Sets font styles for entire site. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\000034}}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 106.25%;
+  line-height: 1.47059;
+  color: #272727;
+  background: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000312}}
+p {
+  margin-bottom: 1.529411765em; }
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000317}}
+  body {
+    line-height: 1.588235294; } }
+/*  Sizes
+ *  For smaller and larger text */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000326}}
+.text-small {
+  font-size: .882352941em;
+  line-height: 1.533333333; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000331}}
+.text-tall {
+  font-size: 1.166666667em;
+  line-height: 1.4; }
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000337}}
+  .text-tall {
+    font-size: 1.352941176em; } }
+/*  Colors
+ *  For alternate text colors */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000346}}
+.text-muted {
+  color: gray; }
+
+/*  Links
+ *  Hyperlink styling */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000354}}
+a {
+  color: #0088cc;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000359}}
+a:hover {
+  color: #005580;
+  text-decoration: underline; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000364}}
+a img {
+  border: none;
+  background: none; }
+
+/*  Prevents border/background on linked image hover.
+ *  Adds slight opacity. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000371}}
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+/*  Lists
+ *  Styling for lists */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000382}}
+ul, ol {
+  margin-bottom: 1.529411765em;
+  margin-left: 2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000387}}
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000391}}
+ul {
+  list-style: disc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\0000395}}
+ol {
+  list-style: decimal; }
+
+/*  Removes list styling.
+ *  For semantic reasons, should only
+ *  be used on unordered lists. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003102}}
+.list-unstyled {
+  margin-left: 0;
+  list-style: none; }
+
+/*  Headings
+ *  h1 through h6 styling
+ *  Heading class lets you use one heading type for semantics
+ *  but style it as another heading type. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003113}}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-top: 1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003120}}
+h1, .h1 {
+  font-size: 1.529411765em;
+  padding-top: .5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003125}}
+h2, .h2 {
+  font-size: 1.352941176em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003129}}
+h3, .h3 {
+  font-size: 1.176470588em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003134}}
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-size: .882352941em;
+  font-style: italic; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003139}}
+h4, .h4 {
+  text-transform: uppercase; }
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003144}}
+  h1, .h1 {
+    font-size: 1.764705882em; } }
+/*  Lines, Quotes and Emphasis */
+/*  Lines */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003153}}
+hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 0.07143em solid #e5e5e5;
+  border-bottom: 0.07143em solid white; }
+
+/*  Bold */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003161}}
+strong {
+  font-weight: bold; }
+
+/*  Italics */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003166}}
+em {
+  font-style: italic; }
+
+/*  Subscript & Superscript */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003171}}
+sub, sup {
+  position: relative;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+  margin-left: .3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003180}}
+sup {
+  top: -0.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003184}}
+sub {
+  bottom: -0.25em; }
+
+/*  Highlighting colors */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003189}}
+::selection {
+  color: white;
+  background: #0088cc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003194}}
+::-moz-selection {
+  color: white;
+  background: #0088cc; }
+
+/*  Blockquotes */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003200}}
+blockquote {
+  border-left: 0.23529em solid #e5e5e5;
+  margin-bottom: 1.529411765em;
+  padding-left: 1.529411765em;
+  padding-right: 1.529411765em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003207}}
+blockquote, q {
+  quotes: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_typography\.scss}line{font-family:\00003212}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/*  BUTTONS */
+/*  Styling for CSS3 buttons */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\000034}}
+.btn, p > button {
+  display: inline-block;
+  font-size: .882352941em;
+  padding: .4em .666666667em;
+  line-height: 1.333333333;
+  font-weight: normal;
+  background-color: gray;
+  border: 0.07143em solid gray;
+  border-radius: .235294118em;
+  margin-left: .3em;
+  margin-bottom: .3em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000315}}
+  .btn:active, p > button:active {
+    -webkit-box-shadow: inset 0 0.14286em 0.23529em rgba(0, 0, 0, 0.15), 0 0.07143em 0.14286em rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0.14286em 0.23529em rgba(0, 0, 0, 0.15), 0 0.07143em 0.14286em rgba(0, 0, 0, 0.05);
+    outline: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000326}}
+.btn,
+p > button,
+.btn:hover,
+p > button:hover,
+a .btn:hover {
+  color: white; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000332}}
+.btn:hover,
+p > button:hover,
+a .btn:hover {
+  background-color: #595959;
+  border-color: #595959;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000339}}
+.btn-blue,
+p > button {
+  background-color: #0088cc;
+  border-color: #0088cc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000346}}
+.btn-blue:hover,
+p > button:hover,
+a .btn-blue:hover {
+  background-color: #005580;
+  border-color: #005580; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000352}}
+.btn-large,
+p > button {
+  padding: .588235294em .882352941em;
+  font-size: 1em;
+  line-height: normal;
+  border-radius: .294117647em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000363}}
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000375}}
+.btn-block + .btn-block {
+  margin-top: .333333333em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000381}}
+button,
+.btn,
+p > button {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-appearance: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_buttons\.scss}line{font-family:\0000390}}
+.btn:first-child,
+p > button:first-child,
+input.btn {
+  margin-left: 0; }
+
+/*  FORMS */
+/*  Styling for form elements */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\000034}}
+form, fieldset {
+  margin-bottom: 1.529411765em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\000038}}
+legend, label {
+  display: block;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: .294117647em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000315}}
+input, textarea, select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  line-height: 1.470588235;
+  color: #555555;
+  vertical-align: middle;
+  margin-bottom: 1.176470588em;
+  padding: .294117647em;
+  border: .071428571em solid #b8b8b8;
+  border-radius: 0.17647em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000331}}
+form button, form .btn {
+  margin-bottom: 1.176470588em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000335}}
+textarea {
+  height: 12em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000341}}
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-bottom: .294117647em;
+  cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000351}}
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 0.07143em 0.07143em rgba(0, 0, 0, 0.075), 0 0 0.47059em rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 0.07143em 0.07143em rgba(0, 0, 0, 0.075), 0 0 0.47059em rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000361}}
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline: thin dotted;
+  outline: .294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.117647059em; }
+
+/*  Inline Inputs */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000369}}
+.input-inline {
+  display: inline;
+  width: auto; }
+
+/*  Condensed Inputs */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000376}}
+.input-condensed {
+  line-height: 1;
+  padding: .117647059em; }
+
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_forms\.scss}line{font-family:\0000383}}
+  input, textarea, select {
+    line-height: 1.588235294; } }
+/*  ICONS */
+/*  A placeholder for icon fonts.
+ *  Learn more at http://gomakethings.com/icon-fonts/ */
+/*  @font-face code. Change font names and URLs as need.
+ *  Commented Out.
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot');
+    src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+         url('fonts/icomoon.woff') format('woff'),
+         url('fonts/icomoon.ttf') format('truetype'),
+         url('fonts/icomoon.svg#IcoMoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+*/
+/*  ICONS */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#IcoMoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_icons\.scss}line{font-family:\0000344}}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'icomoon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_icons\.scss}line{font-family:\0000354}}
+.icon-logo:before {
+  content: "\e000"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_icons\.scss}line{font-family:\0000355}}
+.icon-github:before {
+  content: "\e001"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_icons\.scss}line{font-family:\0000356}}
+.icon-docs:before {
+  content: "\e002"; }
+
+/*  ADD-ONS PLACEHOLDER */
+/*  A placeholder for add-on styling.
+ *  Expand the functionality of Kraken.
+ *  http://cferdinandi.github.io/kraken/addons.html */
+/*  ALIGNMENT, SPACING & VISIBILITY */
+/*  Text alignment */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\000035}}
+.text-center, h1, h1 + p, h3, h3 + p, p + p {
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\000039}}
+.text-right {
+  text-align: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000313}}
+.text-left {
+  text-align: left; }
+
+/*  Floats */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000320}}
+.float-left {
+  float: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000324}}
+.float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000330}}
+.float-right {
+  float: right; }
+
+/*  Spacing */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000337}}
+.no-space {
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000342}}
+.no-space-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000347}}
+.no-space-top {
+  margin-top: 0;
+  padding-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000352}}
+.space-bottom {
+  margin-bottom: 2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000356}}
+.space-bottom-small {
+  margin-bottom: .470588235em;
+  padding-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000361}}
+.space-top {
+  padding-top: .82352941234em; }
+
+/*  Screen Reader Text */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000368}}
+.screen-reader {
+  position: absolute;
+  top: -9999em;
+  left: -9999em; }
+
+/*  Clearfix */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000379}}
+.group:before, .group:after,
+.container:before, .container:after,
+.row:before, .row:after {
+  display: table;
+  content: "";
+  *zoom: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_spacing\.scss}line{font-family:\0000387}}
+.group:after,
+.container:after,
+.row:after {
+  clear: both; }
+
+/*  PRINT STYLES */
+/*  Styling for printed content.
+ *  Adapted from HTML5BP.
+ *  http://html5boilerplate.com/ */
+@media print {
+  /*  Universal selector.
+   *  Reset all content to transparent background,
+   *  black color, and remove box and text shadows. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000311}}
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /*  Specifies page margin */
+  @page {
+    margin: 0.5cm; }
+
+  /*  Underline all links */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000324}}
+  a, a:visited {
+    text-decoration: underline; }
+
+  /*  Show URL after links */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000329}}
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /*  Don't show URL for internal links */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000334}}
+  a[href^="#"]:after {
+    content: ""; }
+
+  /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000339}}
+  p, h1, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /*  Avoid inserting a page break after headers */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000345}}
+  h1, h2, h3 {
+    page-break-after: avoid; }
+
+  /*  Change border color on blockquotes and preformatted text.
+   *  Avoid page breaks inside the content */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000351}}
+  pre, blockquote {
+    border-color: #999;
+    page-break-inside: avoid; }
+
+  /*  Displayed as a table header row group */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000357}}
+  thead {
+    display: table-header-group; }
+
+  /*  Avoid inserting a page break inside table rows and images */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_print\.scss}line{font-family:\0000362}}
+  tr, img {
+    page-break-inside: avoid; } }
+/* =============================================================
+    TABLES
+    Table styling.
+ * ============================================================= */
+/*  Removes default browser settings
+ *  and evens out inconsistencies. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000336}}
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*  Sets table width to 100%.
+ *  Adds bottom-margin. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000345}}
+.table {
+  width: 100%;
+  margin-bottom: 1.52941em; }
+
+/*  Adds table cell padding,
+ *  aligns text to the left,
+ *  and adds a top border to each cell. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000356}}
+.table th,
+.table td {
+  padding: 0.47059em;
+  text-align: left;
+  border-top: 0.07143em solid #b8b8b8; }
+
+/*  Sets table header font-weight to bold.
+ *  Aligns table header text to the bottom of each cell. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000365}}
+.table th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+/*  Aligns cell text to the top of each cell. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000372}}
+.table td {
+  vertical-align: top; }
+
+/*  Removes the border-top from the first row. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000380}}
+.table thead:first-child tr th,
+.table thead:first-child tr td {
+  border-top: 0; }
+
+/*  Adds border-top between two table-body sections. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000386}}
+.table tbody + tbody {
+  border-top: 0.14286em solid #b8b8b8; }
+
+/*  Reduces cell padding */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\0000394}}
+.table-condensed th,
+.table-condensed td {
+  padding: 0.29412em; }
+
+/* Adds borders and border-radius. */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003100}}
+.table-bordered {
+  border: 0.07143em solid #b8b8b8;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  border-radius: 0.47059em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003114}}
+.table-bordered th + th,
+.table-bordered td + td,
+.table-bordered th + td,
+.table-bordered td + th {
+  border-left: 0.07143em solid #b8b8b8; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003123}}
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003130}}
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  border-radius: 0.47059em 0 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003137}}
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+  border-radius: 0 0.47059em 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003144}}
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+  border-radius: 0 0 0 0.47059em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_tables\.scss}line{font-family:\00003151}}
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child {
+  border-radius: 0 0 0.47059em 0; }
+
+/* =============================================================
+    HERO
+    Callout and background color styling.
+ * ============================================================= */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_hero\.scss}line{font-family:\0000329}}
+.bg {
+  background-color: #f4f4f4;
+  padding-top: 1.52941em;
+  padding-bottom: 1.52941em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_hero\.scss}line{font-family:\0000336}}
+.bg-blue {
+  color: white;
+  background-color: #0088cc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_hero\.scss}line{font-family:\0000342}}
+.bg-condensed {
+  padding-top: 0.82353em;
+  padding-bottom: 0.82353em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_hero\.scss}line{font-family:\0000348}}
+.hero {
+  background-color: #f4f4f4;
+  margin-bottom: 1.52941em;
+  padding: 1.52941em;
+  border: 0.07143em solid #e5e5e5;
+  border-radius: 0.23529em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/addons\/_hero\.scss}line{font-family:\0000357}}
+.hero-condensed {
+  padding: 0.82353em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\000034}}
+h1 {
+  font-size: 3em;
+  margin-bottom: .5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\000038}}
+  h1 + p {
+    font-size: 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\0000314}}
+h3 {
+  font-size: 2em;
+  margin-bottom: .5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\0000318}}
+  h3 + p {
+    font-size: 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\0000324}}
+p + p {
+  font-size: 1.3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\0000331}}
+pre {
+  overflow-y: auto; }
+
+/*  BACKGROUND COLORS */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_shame\.scss}line{font-family:\0000343}}
+.bg-gray {
+  background-color: #f4f4f4;
+  padding-top: 1.529411765em;
+  padding-bottom: 1.529411765em; }
+
+/**
+ * Prism base code highlighter theme using Sass
+ *
+ * @author @MoOx
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\0000338}}
+code[class*="language-"], pre[class*="language-"] {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 18px;
+  color: #76d9e6;
+  text-shadow: 0 1px 0 black;
+  background: #2f3030;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: auto !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\0000367}}
+pre[class*="language-"], :not(pre) > code[class*="language-"] {
+  border-radius: 5px;
+  border: 1px solid #e1e1e8;
+  box-shadow: 1px 1px 0.3em -0.1em black inset; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\0000374}}
+pre[class*="language-"] {
+  padding: 12px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\0000381}}
+:not(pre) > code[class*="language-"] {
+  padding: 2px 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003105}}
+code[class*="language-"] .namespace, pre[class*="language-"] .namespace {
+  opacity: .7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003113}}
+code[class*="language-"] .token.comment, code[class*="language-"] .token.prolog, code[class*="language-"] .token.doctype, code[class*="language-"] .token.cdata, pre[class*="language-"] .token.comment, pre[class*="language-"] .token.prolog, pre[class*="language-"] .token.doctype, pre[class*="language-"] .token.cdata {
+  color: #6f705e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003120}}
+code[class*="language-"] .token.null, code[class*="language-"] .token.operator, code[class*="language-"] .token.boolean, code[class*="language-"] .token.number, pre[class*="language-"] .token.null, pre[class*="language-"] .token.operator, pre[class*="language-"] .token.boolean, pre[class*="language-"] .token.number {
+  color: #a77afe; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003125}}
+code[class*="language-"] .token.attr-name, code[class*="language-"] .token.string, pre[class*="language-"] .token.attr-name, pre[class*="language-"] .token.string {
+  color: #e6d06c; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003132}}
+code[class*="language-"] .token.entity, code[class*="language-"] .token.url, .language-css code[class*="language-"] .token.string, .style code[class*="language-"] .token.string, pre[class*="language-"] .token.entity, pre[class*="language-"] .token.url, .language-css pre[class*="language-"] .token.string, .style pre[class*="language-"] .token.string {
+  color: #e6d06c; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003136}}
+code[class*="language-"] .token.selector, pre[class*="language-"] .token.selector {
+  color: #a6e22d; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003146}}
+code[class*="language-"] .token.atrule, code[class*="language-"] .token.attr-value, code[class*="language-"] .token.keyword, code[class*="language-"] .token.control, code[class*="language-"] .token.directive, code[class*="language-"] .token.important, code[class*="language-"] .token.unit, pre[class*="language-"] .token.atrule, pre[class*="language-"] .token.attr-value, pre[class*="language-"] .token.keyword, pre[class*="language-"] .token.control, pre[class*="language-"] .token.directive, pre[class*="language-"] .token.important, pre[class*="language-"] .token.unit {
+  color: #f12770; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003151}}
+code[class*="language-"] .token.regex, code[class*="language-"] .token.statement, pre[class*="language-"] .token.regex, pre[class*="language-"] .token.statement {
+  color: #76d9e6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003156}}
+code[class*="language-"] .token.placeholder, code[class*="language-"] .token.variable, pre[class*="language-"] .token.placeholder, pre[class*="language-"] .token.variable {
+  color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003161}}
+code[class*="language-"] .token.property, code[class*="language-"] .token.tag, pre[class*="language-"] .token.property, pre[class*="language-"] .token.tag {
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003166}}
+code[class*="language-"] .token.important, code[class*="language-"] .token.statement, pre[class*="language-"] .token.important, pre[class*="language-"] .token.statement {
+  font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003189}}
+code[class*="language-"] .token.punctuation, pre[class*="language-"] .token.punctuation {
+  color: #bebec5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003193}}
+code[class*="language-"] .token.entity, pre[class*="language-"] .token.entity {
+  cursor: help; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Owner\/Desktop\/sites\/lib\/tables-sass\/scss\/lib\/_prism\.scss}line{font-family:\00003198}}
+code[class*="language-"] .token.debug, pre[class*="language-"] .token.debug {
+  color: red; }

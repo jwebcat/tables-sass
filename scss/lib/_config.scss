@@ -1,0 +1,257 @@
+/*
+
+    KRAKEN-SASS
+    converted to SCSS by @jwebcat
+    A lightweight front-end boilerplate by Chris Ferdinandi.
+    http://gomakethings.com
+
+
+    Licensed under WTFPL.
+    http://www.wtfpl.net/
+
+
+    COLORS
+    primary: #0088cc
+    secondary: #005580
+    black: #272727
+    Gray: #808080
+    Light Gray: #e5e5e5
+
+
+    FONT STACKS
+    Serif: Georgia, Times, serif
+    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Add your own here...
+
+
+    TYPOGRAPHIC SCALE
+    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+
+*/
+
+// ----------------------------------------
+// // ------ Config for Kraken ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ font-size ------
+// ----------------------------------------
+
+$body-font-size: 106.25%;  // approx. 17px note: if you change this you must adjust the $base-font-size;
+$base-font-size: 17px;     // for mixins that need a px value to function
+
+// ----------------------------------------
+// // ------ colors ------
+// ----------------------------------------
+
+$primary: #0088cc;      // blue
+$secondary: #005580;    // dark-blue
+$black: #272727;        // dark-grey
+$gray: #808080;
+$light-gray: #e5e5e5;
+$muted: #808080;
+$white: #ffffff;
+
+// ----------------------------------------
+// // ----additional color settings ----
+// ----------------------------------------
+
+$body-bg: #ffffff;
+
+// ----------------------------------------
+// // ------ Grid Settings ------
+// ----------------------------------------
+
+$containerMaxWidth: 60em;
+$containerWidth: 88%;
+
+// ----------------------------------------
+// // ------ Typography Settings ------
+// ----------------------------------------
+
+$body-font-family: "Helvetica Neue", Arial, sans-serif;
+$body-line-height: 1.470588235;
+$body-lap-line-height: 1.588235294;
+$text-small-font-size: .882352941em;
+$text-small-line-height: 1.533333333;
+$text-tall-font-size: 1.166666667em;
+$text-tall-line-height: 1.4;
+$text-tall-lap-font-size: 1.352941176em;
+
+// ----------------------------------------
+// // ------ header settings --------
+// ----------------------------------------
+
+$header-line-height: 1.2;
+$header-font-weight: normal;
+$header-margin-bottom: 1em;
+$header-padding-top: 1em;
+$h1-font-size: 1.529411765em;
+$h1-lap-font-size: 1.764705882em;
+$h1-padding-top: 1.5em;
+$h2-font-size: 1.352941176em;
+$h3-font-size: 1.176470588em;
+$h4-h5-h6-font-size: .882352941em;
+$h4-h5-h6-font-style: italic;
+
+// ----------------------------------------
+// // --------- hr settings --------
+// ----------------------------------------
+
+$hr-margin: 2em auto;
+$hr-style-border-top: .071428571em solid $light-gray;
+$hr-style-border-bottom: .071428571em solid $white;
+
+// ----------------------------------------
+// // -------- blockquote settings --------
+// ----------------------------------------
+
+$blockquote-border-left: .235294118em solid $light-gray;
+$blockquote-margin-bottom: 1.529411765em;
+$blockquote-padding-left: 1.529411765em;
+$blockquote-padding-right: 1.529411765em;
+
+// ----------------------------------------
+// // ------ Button Settings ------
+// ----------------------------------------
+
+// ----------------------------------------
+// ------ button color -------
+// ----------------------------------------
+$btn-hover-color: #ffffff;
+$btn-hover-bgcolor: #595959;
+$btn-hover-border: #595959;
+
+// ----------------------------------------
+// // ------ other-button-settings -------
+// ----------------------------------------
+
+$btn-font-size: .882352941em;
+$btn-padding: .4em .666666667em;
+$btn-line-height: 1.333333333;
+$btn-font-weight: normal;
+$btn-border: .071428571em solid $gray;
+$btn-border-radius: .235294118em;
+$btn-margin-left: .3em;
+$btn-margin-bottom: .3em;
+$btn-active-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+$btn-large-padding: .588235294em .882352941em;
+$btn-large-font-size: 1em;
+$btn-large-line-height: normal;
+$btn-large-border-radius: .294117647em;
+$btn-block-margin-top: .333333333em;
+
+// ----------------------------------------
+// // ------ form settings ------
+// ----------------------------------------
+
+$form-margin-bottom: 1.529411765em;
+$form-btn-margin-bottom: 1.176470588em;
+$legend-label-margin-bottom: .294117647em;
+$legend-label-padding: 0;
+$input-text-select-line-height: 1.470588235;
+$input-text-select-color: #555555;
+$input-text-select-margin-bottom: 1.176470588em;
+$input-img-radio-checkbox-margin-bottom: .294117647em;
+$input-text-select-padding: .294117647em;
+$input-text-select-border: .071428571em solid #b8b8b8;
+$text-area-height: 12em;
+$input-focus-border: rgba(82, 168, 236, 0.8);
+$input-focus-shadow: rgba(82, 168, 236, 0.6);
+$input-border-radius: .176470588em;
+$input-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em $input-focus-shadow;
+$input-condensed-line-height: 1;
+$input-condensed-padding: .117647059em;
+
+// ----------------------------------------
+// // ------ spacing settings ------
+// ----------------------------------------
+
+$space-bottom: 2em;
+$space-bottom-small-margin: .470588235em;
+$space-bottom-small-padding: 0;
+$space-top-padding: .82352941234em;
+
+// ----------------------------------------
+// // ------ media queries ------
+// ----------------------------------------
+
+$portable: 30em;
+$lap: 40em;
+$desk: 60em;
+
+// ----------------------------------------
+// // ------ settings for mixins ------
+// ----------------------------------------
+
+$break-small: $portable;
+$break-large: $desk;  // $break-medium is between small and large
+
+// ----------------------------------------
+// -----Settings for add-ons.
+// READTHIS: Uncomment any settings that you want to use and then just
+// uncomment the import for that partial in kraken.scss.--------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ Snapshot settings -------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ styles for snapshot ------
+// ----------------------------------------
+
+// $img-rounded-border-radius: 352941176em;
+// $img-border: .071428571em solid $white;
+// $img-box-shadow: 0 .071428571em .176470588em rgba(0, 0, 0, 0.1);
+// $img-polaroid-padding: .235294118em;
+// $img-polaroid-bg-color: $white;
+
+// ----------------------------------------
+// // ------ Table settings -------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ colors for table ------
+// ----------------------------------------
+// $table-border-color: #b8b8b8;
+
+// ----------------------------------------
+// // ------ styles for table ------
+// ----------------------------------------
+
+// $table-border-width: .071428571em;
+// $table-border-style: solid;
+// $table-margin-bottom: 1.529411765em;
+// $table-cell-padding: .470588235em;
+// $table-cell-text-align: left;
+// $table-cell-border-top: $table-border-width $table-border-style $table-border-color;
+// $table-header-font-weight: bold;
+// $table-body-border-top: .142857143em $table-border-style $table-border-color;
+// $table-condensed-padding: .470588235em .294117647em;
+// $table-bordered-border: $table-border-width $table-border-style $table-border-color;
+// $table-bordered-border-radius: .470588235em;
+// $table-border-left: $table-border-width $table-border-style $table-border-color;
+// $table-bordered-child-radius: .470588235em;
+
+// ----------------------------------------
+// // ------ Config for hero ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ styles for hero -------
+// ----------------------------------------
+
+// $hero-bg-bg-color: #f4f4f4;
+// $hero-padding-top: 1.529411765em;
+// $hero-padding-bottom: 1.529411765em;
+// $hero-bg-blue-color: $white;
+// $hero-bg-blue-bg-color: #0088cc;
+// $hero-bg-condensed-padding-top: .823529412em;
+// $hero-bg-condensed-padding-bottom: .823529412em;
+// $hero-bg-color: #f4f4f4;
+// $hero-margin-bottom: 1.529411765em;
+// $hero-padding: 1.529411765em;
+// $hero-border: .071428571em solid #e5e5e5;
+// $hero-border-radius: .235294118em;
+// $hero-condensed-padding: .823529412em;

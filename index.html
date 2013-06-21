@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Tables - Simple Table Styling</title>
+    <title>Tables-Sass - Simple Table Styling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="kraken.css" type="text/css" />
+    <link rel="stylesheet" href="css/s.css" type="text/css" />
 
     <!-- HTML5 Shim for IE 6-8 -->
     <!--[if lt IE 9]>
@@ -17,14 +17,14 @@
 	<section class="space-bottom bg-gray">
 	    <article class="container text-center">
 
-            <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Tables</h1>
-            <p class="text-tall text-muted">Simple table styling.</p>
+            <h1 class="text-taller"><i class="icon-logo"></i> Tables-Sass</h1>
+            <p class="text-tall text-muted">Simple table styling with some Sass.</p>
 
-	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/tables/archive/master.zip">Download Tables</a></p>
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/jwebcat/tables-sass/archive/master.zip">Download Tables</a></p>
 
 	        <p>
 	            <span class="text-small">
-	                <a href="https://github.com/cferdinandi/tables"><i class="icon-github"></i> GitHub Project</a>
+	                <a href="https://github.com/jwebcat/tables-sass"><i class="icon-github"></i> GitHub Project</a>
 	                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	                <a href="#more"><i class="icon-docs"></i> Getting Started</a>
                 </span>
@@ -39,7 +39,7 @@
 
 	        <h1 class="text-center" id="more">Basic tables</h1>
 
-	        <p>For simple table styling, use the <code>.table</code> class.</p>
+	        <p>For simple table styling, use the <code class="language-markup">.table</code> class.</p>
 
             <table class="table">
                 <thead>
@@ -68,41 +68,24 @@
                 </tbody>
             </table>
 
-            <pre>&lt;table class="table"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;First Name&lt;/th&gt;
-            &lt;th&gt;Last Name&lt;/th&gt;
-            &lt;th&gt;Super Hero&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Peter&lt;/td&gt;
-            &lt;td&gt;Parker&lt;/td&gt;
-            &lt;td&gt;Spiderman&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Bruce&lt;/td&gt;
-            &lt;td&gt;Wayne&lt;/td&gt;
-            &lt;td&gt;Batman&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Clark&lt;/td&gt;
-            &lt;td&gt;Kent&lt;/td&gt;
-            &lt;td&gt;Superman&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+            <pre class="language-markup" data-src="demo/table.html">
+                <code></code>
+            </pre>
+
+            <h3>here is the same with @extend</h3>
+
+            <pre class="language-scss" data-src="demo/table-simple.scss">
+                <code></code>
+            </pre>
 
             <hr>
 
 
             <h1 class="text-center">Condensed Table</h1>
 
-            <p>Reduce cell padding by adding the <code>.table-condensed</code> class.</p>
+            <p>Reduce cell padding by adding the <code class="language-markup">.table-condensed</code> class.</p>
 
-            <p>You still need to include the <code>.table</code> class.</p>
+            <p>You still need to include the <code class="language-markup">.table</code> class.</p>
 
             <table class="table table-condensed">
                 <thead>
@@ -131,18 +114,24 @@
                 </tbody>
             </table>
 
-            <pre>&lt;table class="table table-condensed"&gt;
-    ...
-&lt;/table&gt;</pre>
+            <pre class="language-html" data-src="demo/table-condensed.html">
+                <code></code>
+            </pre>
+
+            <h3>here is the same with @extend</h3>
+
+            <pre class="language-scss" data-src="demo/table-condensed.scss">
+                <code></code>
+            </pre>
 
             <hr>
 
 
             <h1 class="text-center">Bordered Table</h1>
 
-            <p>Add borders and rounded corners by adding the <code>.table-bordered</code> class.</p>
+            <p>Add borders and rounded corners by adding the <code class="language-markup">.table-bordered</code> class.</p>
 
-            <p>You still need to include the <code>.table</code> class.</p>
+            <p>You still need to include the <code class="language-markup">.table</code> class.</p>
 
             <table class="table table-bordered">
                 <thead>
@@ -171,16 +160,26 @@
                 </tbody>
             </table>
 
-            <pre>&lt;table class="table table-bordered"&gt;
-    ...
-&lt;/table&gt;</pre>
+            <pre class="language-html" data-src="demo/table-bordered.html">
+                <code></code>
+            </pre>
+
+            <h3>here is the same with @extend</h3>
+
+            <pre class="language-scss" data-src="demo/table-bordered.scss">
+                <code></code>
+            </pre>
 
             <hr>
 
 
-            <h1 class="text-center">Combining Styles</h1>
+            <h1 class="text-center">Using @extends with Scss</h1>
 
-            <p>You can combine the <code>.table-condensed</code> and <code>.table-bordered</code> classes for additional styling.</p>
+            <p>You can combine the <code>.table-condensed</code> and <code>.table-bordered</code> classes for additional styling using @extends like the following.</p>
+
+            <pre class="language-scss" data-src="demo/table.scss">
+                <code></code>
+            </pre>
 
             <hr>
 
@@ -190,7 +189,7 @@
             <p>Tables works in all modern browsers, and IE 6 and above.</p>
 
             <p>Because IE8 and lower lack <code>border-radius</code> support, rounded corners on bordered tables only work on IE9 and higher.</p>
-            
+
 
         </article>
 	</section>
@@ -200,14 +199,17 @@
 
             <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
 
-            <p class="text-small text-muted text-center">Tables is an add-on for <a href="http://cferdinandi.github.com/kraken/">Kraken</a>, a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.</p>
+            <p class="text-small text-muted text-center">Converted to Sass by <a href="http://www.twitter.com/jwebcat">jwebcat</a>. Free to use under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+
+            <p class="text-small text-muted text-center">Tables is an add-on for <a href="http://jwebcat.github.com/kraken-sass/">Kraken-Sass</a>, a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.</p>
 
         </article>
 	</footer>
 
 
     <!-- Javascript -->
-    <script type='text/javascript' src='js/kraken.js'></script>
+    <script type='text/javascript' src='js/min/kraken.min.js'></script>
+    <script type='text/javascript' src='js/min/prism.min.js'></script>
 
 </body>
 </html>

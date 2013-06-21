@@ -1,0 +1,59 @@
+// ----------------------------------------
+// // ------ Config for hero ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ styles for hero -------
+// ----------------------------------------
+
+$hero-bg-bg-color: #f4f4f4 !default;
+$hero-padding-top: 1.529411765em !default;
+$hero-padding-bottom: 1.529411765em !default;
+$hero-bg-blue-color: $white !default;
+$hero-bg-blue-bg-color: #0088cc !default;
+$hero-bg-condensed-padding-top: .823529412em !default;
+$hero-bg-condensed-padding-bottom: .823529412em !default;
+$hero-bg-color: #f4f4f4 !default;
+$hero-margin-bottom: 1.529411765em !default;
+$hero-padding: 1.529411765em !default;
+$hero-border: .071428571em solid #e5e5e5 !default;
+$hero-border-radius: .235294118em !default;
+$hero-condensed-padding: .823529412em !default;
+
+/* =============================================================
+    HERO
+    Callout and background color styling.
+ * ============================================================= */
+
+.bg,
+%bg {
+    background-color: $hero-bg-bg-color;
+    padding-top: $hero-padding-top;
+    padding-bottom: $hero-padding-bottom;
+}
+
+.bg-blue,
+%bg-blue {
+    color: $hero-bg-blue-color;
+    background-color: $hero-bg-blue-bg-color;
+}
+
+.bg-condensed,
+%bg-condensed {
+    padding-top: $hero-bg-condensed-padding-top;
+    padding-bottom: $hero-bg-condensed-padding-bottom;
+}
+
+.hero,
+%hero {
+    background-color: $hero-bg-color;
+    margin-bottom: $hero-margin-bottom;
+    padding: $hero-padding;
+    border: $hero-border;
+    border-radius: $hero-border-radius;
+}
+
+.hero-condensed,
+%hero-condensed {
+    padding: $hero-condensed-padding;
+}

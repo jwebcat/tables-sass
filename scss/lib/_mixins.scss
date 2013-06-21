@@ -1,0 +1,103 @@
+// mixins for kraken-sass
+
+@mixin adjust-to($media) {
+    @if $media == handhelds {
+      @media  only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $media == medium-screens {
+      @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    @else if $media == wide-screens {
+      @media only screen and (min-width: $break-large) { @content; }
+    }
+    @else if $media == retina-screens {
+      @media  only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) and (min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
+    }
+}
+
+// example use for adjust-to()
+// .profile-pic {
+//     float: left;
+//     width: 250px;
+//     @include  adjust-to(handhelds) { width: 100% ;}
+//     @include  adjust-to(medium-screens) { width: 125px; }
+//     @include  adjust-to(wide-screens) { float: none; }
+//     @include  adjust-to(retina-screens) {background-image:url()}
+// }
+
+// or like this
+// @include adjust-to(handhelds) {
+//     .profile-pic {
+//         width: 100%;
+//     }
+//         .profile-header {
+//             font-size: 1.3em;
+//         }
+// }
+
+
+// px to em function
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+// rem function from Stephen Rushing
+
+//Define 1em = ?px
+$baseline: $base-font-size;
+
+// Remove the unit from a number
+@function strip-unit($num){
+    @return strip-unit($px) / strip-unit($baseline) + rem;
+}
+
+//Calculate an rem value from px
+//If $px is an rem or em value, it will be returned as-is, with an rem unit.
+//If $px is a px value, it will be converted to an rem.
+@function rem($px) {
+    @if(unit($px) == "rem"){
+        @return $px;
+    }@else if(unit($px) == "em") {
+        //Assume an em value is an rem -- it's all we can do.
+        @return strip-unit($px) + rem;
+    }@else if(unit($px) != "%") {
+        //Must be a px value
+        @return strip-unit($baseline) / strip-unit($px) + rem;
+    }
+    @return null;
+}
+
+// Use rem units with px fallback
+// Specify a px, em, or rem value with each property. Unitless values will be considered an rem.
+@mixin rem($properties...){
+    @each $property in $properties {
+        $value: nth($property, 2);
+        @if(unit($value) == "px"){
+            #{nth($property, 1)}:$value;
+            #{nth($property, 1)}: rem($value);
+        }@else{
+            #{nth($property, 1)}:strip-unit($value) * $baseline;
+            #{nth($property, 1)}:rem($value);
+        }
+    }
+}
+
+// rem() usage:
+
+// .myselector {
+//     line-height: rem(15px); //Pass a px value.
+//     right: rem(1.5); //Pass a rem, em, or unitless value.
+//     @include rem(font-size 12px, top 1.7);
+//  }
+
+// rem() output:
+
+// .myselector {
+//     line-height: 1.06667rem;
+//     right: 10.66667rem;
+//     font-size: 12px;
+//     font-size: 1.33333rem;
+//     top: 27.2px;
+//     top: 9.41176rem;
+// }

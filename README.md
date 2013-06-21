@@ -1,12 +1,19 @@
-# Tables-Sass - Simple Table Styling with some Sass
+# Tables-Sass
+### Simple Table Styling with some Sass
+
 Tables-Sass is a collection of simple image styling adapted from [Bootstrap](http://getbootstrap.com).
 
 ## How It Works
+
+Inside `/scss` you owill find both `tables.scss` and `_tables.scss`. This is simply for convenience if you wish to include Tables-sass as a scss partial.
+
+You can also find the compiled, minified version of Tables-Sass in `css/tables.css`.
+
 Getting started with Tables is really easy. [View the online tutorial](http://jwebcat.github.com/tables-sass/) or dig through the `index.html` file or `/demo`.
 
 ## Changelog for Tables-Sass
 * Version 1.0.1 (February 21, 2013)
-  * Reduce padding for .table-condensed class.
+  * Reduce padding for `.table-condensed`.
 * Version 1.0.1 (February 21, 2013)
   * Convert to Sass and add demos
 

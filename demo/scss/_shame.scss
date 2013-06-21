@@ -1,0 +1,22 @@
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+        + p {
+            font-size: 1.5em;
+        }
+}
+
+p + p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+h2 {
+    font-size: 2.2em;
+    + p {
+        font-size: 1.3em;
+    }
+}

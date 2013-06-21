@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tables - Simple table styling</title>
+    <title>Tables-Sass - Simple table styling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="css/tables.css" type="text/css">
+    <link rel="stylesheet" href="demo/css/s.css" type="text/css">
 
     <!-- HTML5 Shim for IE -->
     <!--[if IE]>
@@ -16,8 +16,9 @@
 <body>
 	<section class="container">
 
-	    <h1 style="text-align: center; font-size: 3em;">Tables</h1>
-	    <p style="text-align: center; font-size: 1.5em;">Simple table styling.</p>
+	    <h1>Tables-Sass</h1>
+	    <p>Simple table styling.</p>
+        <p>You can find the code for the examples in /demo.</p>
 
         <table class="table">
             <thead>
@@ -100,7 +101,22 @@
             </tbody>
         </table>
 
+        <h2>Here is the markup for the above tables</h2>
+        <p>These tables above are using presentational css .classes in the markup</p>
+
+        <pre class="language-markup" data-src="demo/tables-demo.html">
+            <code></code>
+        </pre>
+
+        <h2>Using Scss @extends with %placeholders</h2>
+        <p>Here is the scss to produce the same result with no .classes in your markup</p>
+
+        <pre class="language-scss" data-src="demo/tables-demo.scss">
+            <code></code>
+        </pre>
+
 	</section>
+    <script src="demo/js/min/prism.min.js"></script>
 
 </body>
 </html>
